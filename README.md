@@ -12,3 +12,5 @@ https://rolanduwxcc.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Warren Rowland
+
+### ©️2020 Run Buddy, Inc
