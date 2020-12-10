@@ -228,22 +228,51 @@ section {
     font-size: 17px;
 }
 /************************************Service Grid Container ***/
+.services {
+    background-color: #fce138;
+}
+.service-grid-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .service-grid-container {
-    max-width: 940px;
+    background-color: lightyellow;
+    width: 80%;
     margin-bottom: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    gap: 10px;
-    grid-auto-flow: row;
+    grid-template-columns: 1fr repeat(2, 4fr);
+    grid-template-rows: repeat(5, 1fr) 2fr;
+    border: 2px solid #024e76;
+    color:  #024e76;
+    font-size: 18px;
 }
 .service-grid-item {
-    background-color: orange;
-    border: solid;
-    padding: 1em;
-    color: black;
+    padding: 15px 0;
+    border: 2px solid #024e76;
+    display: flex;
+    align-items: center; /* y axis alignment*/
+    justify-content: center;
+    text-align: center;
 }
-.box1 {
+.service-grid-item.basic {
+    grid-column: 2 / span 1;
+}
+.service-grid-item.both {
+    grid-column: 2/ span 2;
+}
+.service-grid-item.cancel {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+
+}
+.grid-head, .grid-price, .service-grid-item.cancel {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* .box1 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -256,7 +285,7 @@ section {
 .box3 {
     grid-column: 2/ span 2;
     grid-row: 3/ span1;
-}
+} */
 .contactdata {
     background-color: #024e76;
 }
@@ -379,6 +408,23 @@ section {
     }
     .step-text {
         flex: 100%;
+    }
+    .service-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: repeat(5, 1fr) 2fr 1fr; */
+    }
+    .service-grid-item.basic {
+        grid-column: 1;
+    }
+    .service-grid-item.both {
+        grid-column: 1/ span 2;
+    }
+    .service-grid-item.cancel {
+        grid-column: 1/ span 2;
+        grid-row: -1;
+        transform: none;
+        writing-mode: unset;
+
     }
 }
 /**********************************FOR MOBILE PHONES AND SMALLER***/
