@@ -313,6 +313,7 @@ section {
     padding: 15px;
     align-items: flex-end;
     position: relative;
+    overflow: hidden;
 }
 .trainer-img::after {
     opacity: 0;
@@ -323,10 +324,14 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    transition: 3s;
+    transition: 1s;
 }
 .trainer:hover .trainer-img::after {
     opacity: 1;
+}
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+    top: 0px;
+    /* transform: translate(-200px); */
 }
 .trainer-img h3 {
     position: relative;
@@ -334,12 +339,14 @@ section {
     font-size: 28px;
     margin-bottom: 5px;
     top: 200px;
+    transition: .5s;
 }
 .trainer-img h4 {
     font-size: 22px;
     position: relative;
     z-index: 50;
     top:    200px;
+    transition: .6s;
 }
 .trainer-1 {
     background-image: url("../images/trainer-1.jpg");
@@ -356,11 +363,13 @@ section {
 }
 .trainer-bio h3 {
     font-size: 28px;
+    display: none;
 }
 .trainer-bio h4 {
     font-size: 22px;
     font-weight: lighter;
     margin-bottom: 15px;
+    display: none;
 }
 .trainer-bio p {
     font-size: 17px;
@@ -577,6 +586,21 @@ section {
         transform: none;
         writing-mode: unset;
 
+    }
+    .trainer-img h3 {
+        display: none;
+    }
+    .trainer-img h4 {
+        display: none;
+    }
+    .trainer-img::after {
+        display: none;
+    }
+    .trainer-bio h3 {
+        display: block;
+    }
+    .trainer-bio h4 {
+        display: block;
     }
 }
 /**********************************FOR MOBILE PHONES AND SMALLER***/
